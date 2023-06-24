@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3307/universe?useSSL=false
+    username: root
+    password: 1111
+    hikari:
+      connection-timeout: 20000 #20 sec
+      minimum-idle: 5
+      maximum-pool-size: 10
+      max-lifetime: 900000 #15 min
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+    show-sql: true
+server:
+  port: 8080
